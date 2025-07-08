@@ -1,3 +1,6 @@
+import {useEffect} from 'react';
+import {useRouter} from 'expo-router';
+
 import { Image } from 'expo-image';
 import { Button, Platform, StyleSheet, ScrollView , View } from 'react-native';
 
@@ -9,8 +12,14 @@ import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function About() {
+  const router = useRouter();
   const dotmUrl = '../../assets/images/feb-dotm.png'
   const koctmUrl = '../../assets/images/koc-of-the-month.png'
+
+  
+  // useEffect(() =>{
+  //   alert('button pressed!');;
+  // }, []);
 
 
   return (
@@ -48,22 +57,50 @@ export default function About() {
           that make Chaus, Chaus.
         </ThemedText>
       </View>
-      <View>
+      <View style = {styles.sponsors}>
         <ThemedText>Our Partners</ThemedText>
-        {/* <Image
-          source={require('')}
-          style={styles.kocImage}
-        /> */}
+        <View style={styles.sponsorGrid}>
+          <Image
+            source={require('../../assets/sponsors/sponsor-1.png')}
+            style={styles.sponsorImage}
+          />
+          <Image
+            source={require('../../assets/sponsors/sponsor-2.png')}
+            style={styles.sponsorImage}
+          />
+          <Image
+            source={require('../../assets/sponsors/sponsor-3.png')}
+            style={styles.sponsorImage}
+          />
+          <Image
+            source={require('../../assets/sponsors/sponsor-4.png')}
+            style={styles.sponsorImage}
+          />
+          <Image
+            source={require('../../assets/sponsors/sponsor-5.png')}
+            style={styles.sponsorImage}
+          />
+          <Image
+            source={require('../../assets/sponsors/sponsor-6.png')}
+            style={styles.sponsorImage}
+          />
+        </View>
       </View>
       <Button
+        onPress={() => router.push('/sustainability')}
         title= "Learn More About Our Sustainability"
+        color= "#F49C84"
+        accessibilityLabel="Learn more about chaus sustainability policies"
       ></Button>
         <Image
           source={require('../../assets/images/2024-25-managers.png')}
           style={styles.kocImage}
         />
       <Button
+        onPress={() => router.push('/managers')}
         title= "Meet The Managers"
+        color= "#F49C84"
+        accessibilityLabel="Learn more about the 2024-2025 managers"
       ></Button>
     </ScrollView>
   );
@@ -72,7 +109,8 @@ export default function About() {
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: 40,
   },
   headerImage: {
     color: '#808080',
@@ -83,6 +121,21 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  sponsors:{
+    alignItems: 'center',
+  },
+  sponsorGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    maxWidth: 330,
+    margin: 10,
+  },
+  sponsorImage: {
+    width: 100,
+    height: 100,
+    margin: 10,
   },
   kocImage: {
     width: 300,

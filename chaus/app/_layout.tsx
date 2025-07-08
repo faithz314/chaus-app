@@ -22,6 +22,22 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
+      
+       {/* ABOUT PAGE */}
+          <Stack.Screen
+          name="sustainability"
+          options={{
+            presentation: 'modal',
+            headerShown: true,
+          }}
+          />
+          <Stack.Screen
+          name="managers"
+          options={{
+            presentation: 'modal',
+            headerShown: true,
+          }}
+          />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
