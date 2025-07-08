@@ -37,7 +37,8 @@ export default function About() {
         </ThemedText>
       </View>
       <View>
-        <ThemedText>Values</ThemedText>
+      
+      <ThemedText>Values</ThemedText>
         <ThemedText>
           Coffeehouse loves sustainability. Our sustainability efforts include our 
           Bring Your Own Mug Discount, Coffeehouse Sustainability Week, 
