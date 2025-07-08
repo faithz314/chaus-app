@@ -24,7 +24,7 @@ export default function About() {
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <ThemedText>About</ThemedText>
+      <ThemedText type='title' style={styles.infoContainer}>About</ThemedText>
       
       <View>
         <ThemedText>
@@ -38,17 +38,19 @@ export default function About() {
       </View>
       <View>
       
-      <ThemedText>Values</ThemedText>
-        <ThemedText>
-          Coffeehouse loves sustainability. Our sustainability efforts include our 
-          Bring Your Own Mug Discount, Coffeehouse Sustainability Week, 
-          Fair Trade/Direct Trade Coffee from Katz, in-house mugs, recycling, 
-          100% Recycled Content Napkins, and a linen. In 2020, we created the Bean Fund, 
-          through which we will donate $1000 a year to causes we believe in.
-        </ThemedText>
+      <View style={styles.infoContainer}>
+        <ThemedText type='title'>Values</ThemedText>
+          <ThemedText>
+            Coffeehouse loves sustainability. Our sustainability efforts include our 
+            Bring Your Own Mug Discount, Coffeehouse Sustainability Week, 
+            Fair Trade/Direct Trade Coffee from Katz, in-house mugs, recycling, 
+            100% Recycled Content Napkins, and a linen. In 2020, we created the Bean Fund, 
+            through which we will donate $1000 a year to causes we believe in.
+          </ThemedText>
+        </View>
+        <View>
       </View>
-      <View>
-        <ThemedText>KOCs</ThemedText>
+      <ThemedText type='title'>KOCs</ThemedText>
         <ThemedText>
           Keepers of Coffee, known around Rice as KOCs, are the baristas who keep Coffeehouse 
           running. The key to why KOCs are so special? All employees are regular Rice students! 
@@ -119,8 +121,9 @@ const styles = StyleSheet.create({
     left: -35,
     position: 'absolute',
   },
-  titleContainer: {
+  infoContainer: {
     flexDirection: 'row',
+    justifyContent: 'center',
     gap: 8,
   },
   sponsors:{
