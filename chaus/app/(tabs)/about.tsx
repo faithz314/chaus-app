@@ -90,9 +90,9 @@ export default function About() {
         </View>
       </View>
       <Button
-        onPress={() => router.push('/sustainability')}
+        onPress={() => router.push('/Sustainability')}
         title= "Learn More About Our Sustainability"
-        color= "F49C#84"
+        color= "#F49C84"
         accessibilityLabel="Learn more about chaus sustainability policies"
       ></Button>
         <Image
@@ -100,7 +100,7 @@ export default function About() {
           style={styles.kocImage}
         />
       <Button
-        onPress={() => router.push('/managers')}
+        onPress={() => router.push('/Managers')}
         title= "Meet The Managers"
         color= "#F49C84"
         accessibilityLabel="Learn more about the 2024-2025 managers"

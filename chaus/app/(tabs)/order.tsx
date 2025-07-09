@@ -1,7 +1,7 @@
 import { Image } from 'expo-image';
 import { TouchableOpacity, StyleSheet, ScrollView , View } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
-
+import {useRouter} from 'expo-router';
 
 export default function Order() {
   const regDrinksURL = '../../assets/images/order-drinks.png'
@@ -9,9 +9,16 @@ export default function Order() {
   const vouchersURL = '../../assets/images/vouchers.png'
 
 
+  const router = useRouter();
+  const handlePress = () => {
+    alert('button pressed!');
+  }
+
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => router.push('/OrderDrinks')}
+      >
         <View style={styles.option}>
           <Image 
             source={require(regDrinksURL)}

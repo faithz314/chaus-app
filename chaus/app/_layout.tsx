@@ -22,17 +22,25 @@ export default function RootLayout() {
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
-      
+        
+       {/* ORDER DRINKS */}
+          <Stack.Screen
+          name="OrderDrinks"
+          options={{
+            presentation: 'modal',
+            headerShown: true,
+          }}
+          />
        {/* ABOUT PAGE */}
           <Stack.Screen
-          name="sustainability"
+          name="Sustainability"
           options={{
             presentation: 'modal',
             headerShown: true,
           }}
           />
           <Stack.Screen
-          name="managers"
+          name="Managers"
           options={{
             presentation: 'modal',
             headerShown: true,
