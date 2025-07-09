@@ -92,7 +92,7 @@ export default function About() {
       <Button
         onPress={() => router.push('/sustainability')}
         title= "Learn More About Our Sustainability"
-        color= "#F49C84"
+        color= "F49C#84"
         accessibilityLabel="Learn more about chaus sustainability policies"
       ></Button>
         <Image

@@ -1,35 +1,49 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet, ScrollView , View } from 'react-native';
-
-import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
-
+import { TouchableOpacity, StyleSheet, ScrollView , View } from 'react-native';
 import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 
-export default function TabTwoScreen() {
-  const dotmUrl = '../../assets/images/feb-dotm.png'
-  const koctmUrl = '../../assets/images/koc-of-the-month.png'
+
+export default function Order() {
+  const regDrinksURL = '../../assets/images/order-drinks.png'
+  const cateringURL = '../../assets/images/cater.png'
+  const vouchersURL = '../../assets/images/vouchers.png'
 
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <View>
-        <ThemedText>
-          ORDER REG DRINKS
-        </ThemedText>
-      </View>
-      <View>
-        <ThemedText>
+      <TouchableOpacity>
+        <View style={styles.option}>
+          <Image 
+            source={require(regDrinksURL)}
+            style={styles.kocImage}
+          />
+          <ThemedText type="title">
+            ORDER REG DRINKS
+          </ThemedText>
+        </View>
+     </TouchableOpacity>
+    <TouchableOpacity>
+      <View style={styles.option}>
+        <Image 
+          source={require(cateringURL)}
+          style={styles.kocImage}
+        />
+        <ThemedText type="title">
           CATER
         </ThemedText>
       </View>
-      <View>
-        <ThemedText>
+    </TouchableOpacity>
+    <TouchableOpacity>
+      <View style={styles.option}>
+        <Image 
+          source={require(vouchersURL)}
+          style={styles.kocImage}
+        />
+        <ThemedText type="title">
           VOUCHERS
         </ThemedText>
       </View>
+    </TouchableOpacity>
     </ScrollView>
   );
 }
@@ -37,22 +51,18 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    // justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    padding: 30
   },
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
-  },
-  titleContainer: {
-    flexDirection: 'row',
+  option: {
     gap: 8,
+    margin: 20,
+    borderColor: '#F49C84',
+    borderWidth: 2,
+    borderRadius: 10
   },
   kocImage: {
     width: 300,
-    height: 300,
-    marginVertical: 10,
+    height: 100,
   },
 });
