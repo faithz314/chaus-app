@@ -8,7 +8,8 @@ I don't know shit about backend, so I'll also be coding
 up a backend for this app hahahaha
 
 Update 9/14/2026
-Use this repository to prep for interviews with Figma and Databricks
+Use this repository to prep for interviews with Figma and Databricks.
+Additional companies to aim for: Stripe, Pinterest, Netflix.
 
 ## Setup Instructions
 
