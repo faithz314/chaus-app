@@ -9,7 +9,7 @@ up a backend for this app hahahaha
 
 Update 9/14/2026
 Use this repository to prep for interviews with Figma and Databricks.
-Additional companies to aim for: Stripe, Pinterest, Netflix.
+Additional companies to aim for: Stripe, Pinterest, Netflix. 
 
 ## Setup Instructions
 
